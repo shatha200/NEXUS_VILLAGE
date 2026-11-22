@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { INITIAL_ALLOCATION, DROP_MAP, remainingCoins, adjustedAllocation, eligibleRain, rainLiters, microEnergyWh } from '../src/services/simulationRules.js';
+const s={water_available:12,energy_available:8};
+let a={...INITIAL_ALLOCATION};
+assert.equal(remainingCoins(s,a).water,12);
+assert.equal(DROP_MAP.water.pump,'source_water');
+assert.equal(DROP_MAP.energy.agriculture,'pump_energy');
+a=adjustedAllocation(s,a,'source_water',5).allocation;
+assert.equal(remainingCoins(s,a).water,7);
+a=adjustedAllocation(s,a,'hospital_water',3).allocation;
+assert.equal(remainingCoins(s,a).water,4);
+assert.match(adjustedAllocation(s,a,'agriculture_water',7).error,/Only 4/);
+assert.equal(remainingCoins(s,a).energy,8);
+assert.equal(adjustedAllocation(s,a,'pump_energy',8).allocation.pump_energy,8);
+assert.ok(!eligibleRain({probability:.1,rainfall_mm:12}));
+assert.ok(!eligibleRain({probability:.95,rainfall_mm:3}));
+assert.ok(eligibleRain({probability:.83,rainfall_mm:12}));
+assert.ok(eligibleRain({probability:null,rainfall_mm:12})); // explicit DEMO, not forecast
+assert.ok(rainLiters(100)<=650);
+assert.ok(microEnergyWh(378)>0 && microEnergyWh(378)<1);
+console.log('PASS: resource inventory, manual reserve, drop mapping, rain thresholds, micro-energy estimate');

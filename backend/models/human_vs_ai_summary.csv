@@ -1,0 +1,22 @@
+scenario,policy,unmet_pct,clinic_cov,household_cov,irrigation_cov,energy_kwh,end_reservoir,end_battery
+blackout,AI (ML forecast),25.0,100.0,97.3,57.1,687.7,5483.5,498.9
+blackout,AI (perfect forecast),21.9,100.0,97.4,61.0,726.3,5419.2,486.9
+blackout,Human rule,21.9,90.3,85.0,65.2,726.3,5419.2,486.9
+combined_crisis,AI (ML forecast),31.2,100.0,97.4,48.5,646.9,1010.3,492.4
+combined_crisis,AI (perfect forecast),28.4,100.0,97.4,52.1,677.9,958.8,477.8
+combined_crisis,Human rule,28.4,92.2,84.7,56.2,677.9,958.8,478.6
+drought,AI (ML forecast),9.4,100.0,100.0,78.6,763.0,922.8,596.5
+drought,AI (perfect forecast),5.1,100.0,100.0,85.2,797.6,865.1,595.6
+drought,Human rule,5.1,100.0,98.9,85.6,797.6,865.1,595.6
+heatwave,AI (ML forecast),6.3,100.0,100.0,88.0,1145.1,4694.1,582.4
+heatwave,AI (perfect forecast),0.2,100.0,100.0,96.5,1213.1,4580.8,576.6
+heatwave,Human rule,0.2,100.0,100.0,96.5,1213.1,4580.8,576.6
+normal,AI (ML forecast),4.8,100.0,100.0,86.3,925.1,5171.3,593.8
+normal,AI (perfect forecast),0.0,100.0,100.0,93.3,971.3,5097.9,593.8
+normal,Human rule,0.0,100.0,100.0,93.3,971.3,5097.9,593.8
+pump_failure,AI (ML forecast),6.0,100.0,100.0,89.0,941.0,4629.8,595.7
+pump_failure,AI (perfect forecast),1.7,100.0,100.0,94.7,988.9,4550.1,595.5
+pump_failure,Human rule,1.7,100.0,100.0,94.7,988.9,4550.1,595.5
+water_shortage,AI (ML forecast),12.6,100.0,100.0,79.4,785.2,650.1,598.7
+water_shortage,AI (perfect forecast),10.1,100.0,100.0,84.0,804.8,617.5,598.6
+water_shortage,Human rule,10.1,100.0,96.9,84.8,804.8,617.5,598.6

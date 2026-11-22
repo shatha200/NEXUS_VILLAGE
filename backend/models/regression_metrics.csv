@@ -1,0 +1,9 @@
+model,subset,MAE,RMSE,naive_MAE
+household,all test,3.92,5.32,46.53
+household,combined_crisis only,4.49,6.07,46.63
+clinic,all test,0.17,0.22,1.72
+clinic,combined_crisis only,0.18,0.23,1.75
+irrigation,all test,10.35,25.23,59.56
+irrigation,combined_crisis only,12.3,29.41,68.68
+solar,all test,6.35,11.72,271.38
+solar,combined_crisis only,6.4,11.64,268.05
